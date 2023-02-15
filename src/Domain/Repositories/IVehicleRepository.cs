@@ -7,5 +7,6 @@ namespace Domain.Repositories
     {
         void Add(Vehicle vehicle);
         Task<bool> IsRegistrationNumberUniqueAsync(RegistrationNumber registrationNumber, CancellationToken cancellationToken = default);
+        Task<Vehicle?> GetVehicleByIdAsync(Guid id, CancellationToken cancellationToken = default);
     }
 }
