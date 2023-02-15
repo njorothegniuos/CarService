@@ -19,12 +19,12 @@ namespace Domain.ValueObjects
         {
             if (string.IsNullOrWhiteSpace(engineChasisNumber))
             {
-                return Result.Failure<EngineChasisNumber>(DomainErrors.EngineChasisNumber.Empty);
+                return Result.Failure<EngineChasisNumber>(DomainErrors.Vehicle.EngineChasisNumber.Empty);
             }
 
             if (engineChasisNumber.Length > MaxLength)
             {
-                return Result.Failure<EngineChasisNumber>(DomainErrors.EngineChasisNumber.TooLong);
+                return Result.Failure<EngineChasisNumber>(DomainErrors.Vehicle.EngineChasisNumber.TooLong);
             }
 
             return new EngineChasisNumber(engineChasisNumber);

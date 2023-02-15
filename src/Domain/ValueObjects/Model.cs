@@ -19,12 +19,12 @@ namespace Domain.ValueObjects
         {
             if (string.IsNullOrWhiteSpace(model))
             {
-                return Result.Failure<Model>(DomainErrors.Model.Empty);
+                return Result.Failure<Model>(DomainErrors.Vehicle.Model.Empty);
             }
 
             if (model.Length > MaxLength)
             {
-                return Result.Failure<Model>(DomainErrors.Model.TooLong);
+                return Result.Failure<Model>(DomainErrors.Vehicle.Model.TooLong);
             }
 
             return new Model(model);

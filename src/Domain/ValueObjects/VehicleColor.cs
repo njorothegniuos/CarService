@@ -19,12 +19,12 @@ namespace Domain.ValueObjects
         {
             if (string.IsNullOrWhiteSpace(vehicleColor))
             {
-                return Result.Failure<VehicleColor>(DomainErrors.VehicleColor.Empty);
+                return Result.Failure<VehicleColor>(DomainErrors.Vehicle.VehicleColor.Empty);
             }
 
             if (vehicleColor.Length > MaxLength)
             {
-                return Result.Failure<VehicleColor>(DomainErrors.VehicleColor.TooLong);
+                return Result.Failure<VehicleColor>(DomainErrors.Vehicle.VehicleColor.TooLong);
             }
 
             return new VehicleColor(vehicleColor);

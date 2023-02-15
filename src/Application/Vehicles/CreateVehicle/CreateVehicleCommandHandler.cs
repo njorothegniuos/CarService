@@ -27,9 +27,9 @@ namespace Application.Vehicles.CreateVehicle
             Result<VehicleColor> vehicleColorResult = VehicleColor.Create(request.VehicleColor);
             Result<EngineChasisNumber> engineChasisNumberResult = EngineChasisNumber.Create(request.EngineChasisNumber);
 
-            var vehicle = Vehicle.Create(Guid.NewGuid(), registrationNumberResult.Value, modelResult.Value, request.year,
+            var vehicle = Vehicle.Create(Guid.NewGuid(), registrationNumberResult.Value, modelResult.Value, request.Year,
                 vehicleColorResult.Value, engineChasisNumberResult.Value
-                , request.capacity, request.numberOfPassengers, request.mileage);
+                , request.Capacity, request.NumberOfPassengers, request.Mileage);
 
             if (!await _vehicleRepository.IsRegistrationNumberUniqueAsync(registrationNumberResult.Value, cancellationToken))
             {

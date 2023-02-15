@@ -1,5 +1,5 @@
 ﻿using Domain.Primitives;
-using Gatherly.Persistence.Outbox;
+using Persistence.Outbox;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Newtonsoft.Json;

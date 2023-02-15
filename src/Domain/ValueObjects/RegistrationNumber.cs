@@ -19,12 +19,12 @@ namespace Domain.ValueObjects
         {
             if (string.IsNullOrWhiteSpace(registrationNumber))
             {
-                return Result.Failure<RegistrationNumber>(DomainErrors.RegistrationNumber.Empty);
+                return Result.Failure<RegistrationNumber>(DomainErrors.Vehicle.RegistrationNumber.Empty);
             }
 
             if (registrationNumber.Length > MaxLength)
             {
-                return Result.Failure<RegistrationNumber>(DomainErrors.RegistrationNumber.TooLong);
+                return Result.Failure<RegistrationNumber>(DomainErrors.Vehicle.RegistrationNumber.TooLong);
             }
 
             return new RegistrationNumber(registrationNumber);

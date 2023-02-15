@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Persistence.Repositories
 {
-    internal sealed class VehicleRepository : IVehicleRepository
+    public sealed class VehicleRepository : IVehicleRepository
     {
         private readonly ApplicationDbContext _dbContext;
 

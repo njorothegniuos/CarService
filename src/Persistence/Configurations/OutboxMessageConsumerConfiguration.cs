@@ -1,5 +1,4 @@
-﻿using Gatherly.Persistence.Constants;
-using Gatherly.Persistence.Outbox;
+﻿using Persistence.Outbox;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,7 +7,7 @@ internal sealed class OutboxMessageConsumerConfiguration : IEntityTypeConfigurat
 {
     public void Configure(EntityTypeBuilder<OutboxMessageConsumer> builder)
     {
-        builder.ToTable(TableNames.OutboxMessageConsumers);
+        builder.ToTable("OutboxMessageConsumers");
 
         builder.HasKey(outboxMessageConsumer => new
         {
