@@ -2,7 +2,7 @@
 
 namespace Application.Vehicles.CreateVehicle
 {
-    public sealed record CreateVehicleCommand(
-    string RegistrationNumber, string Model, int year, string VehicleColor, string EngineChasisNumber,
-            int capacity, int numberOfPassengers, int mileage) : ICommand<Guid>;
+    public sealed record CreateVehicleCommand(string RegistrationNumber, string Model, int Year, 
+        string VehicleColor, string EngineChasisNumber,int Capacity, int NumberOfPassengers, 
+        int Mileage) : ICommand<Guid>;
 }

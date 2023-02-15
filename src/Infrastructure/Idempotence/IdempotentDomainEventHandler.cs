@@ -1,6 +1,9 @@
 ﻿using Application.Abstractions.Messaging;
 using Domain.Primitives;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
+using Persistence;
+using Persistence.Outbox;
 
 namespace Infrastructure.Idempotence
 {
