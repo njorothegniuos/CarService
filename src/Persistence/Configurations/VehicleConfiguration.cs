@@ -14,6 +14,12 @@ namespace Persistence.Configurations
             builder.HasKey(x => new { x.Id });
 
             builder
+           .HasOne<Member>()
+           .WithMany()
+           .HasForeignKey(x => x.MemberId)
+           .OnDelete(DeleteBehavior.Restrict);
+
+            builder
             .Property(x => x.RegistrationNumber)
             .HasConversion(x => x.Value, v => RegistrationNumber.Create(v).Value)
             .HasMaxLength(RegistrationNumber.MaxLength);

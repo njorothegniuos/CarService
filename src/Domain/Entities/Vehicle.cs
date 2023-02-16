@@ -6,10 +6,11 @@ namespace Domain.Entities
 {
     public sealed class Vehicle : AggregateRoot, IAuditableEntity
     {
-        private Vehicle(Guid id, RegistrationNumber registrationNumber,Model model, int year, VehicleColor vehicleColor,             EngineChasisNumber engineChasisNumber,
+        private Vehicle(Guid id, Member member, RegistrationNumber registrationNumber,Model model, int year, VehicleColor vehicleColor,             EngineChasisNumber engineChasisNumber,
             int capacity,int numberOfPassengers, int mileage)
             : base(id)
         {
+            MemberId = member.Id;
             RegistrationNumber = registrationNumber;
             Capacity = capacity;
             NumberOfPassengers = numberOfPassengers;
@@ -19,7 +20,7 @@ namespace Domain.Entities
         private Vehicle()
         {
         }
-
+        public Guid MemberId { get; private set; }
         public RegistrationNumber RegistrationNumber { get; set; }
 
         public Model Model { get; set; }
@@ -35,12 +36,13 @@ namespace Domain.Entities
         public DateTime? ModifiedOnUtc { get; set; }
 
         public static Vehicle Create(
-            Guid id, RegistrationNumber registrationNumber, Model model, int year, VehicleColor vehicleColor,  
+            Guid id, Member member, RegistrationNumber registrationNumber, Model model, int year, VehicleColor vehicleColor,  
             EngineChasisNumber engineChasisNumber,
             int capacity, int numberOfPassengers, int mileage)
         {
             var vehicle = new Vehicle(
                 id,
+                member,
                 registrationNumber,
                 model,
                 year, vehicleColor,
