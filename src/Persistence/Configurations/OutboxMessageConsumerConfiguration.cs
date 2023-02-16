@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
 
-namespace Gatherly.Persistence.Configurations;
+namespace Persistence.Configurations;
 internal sealed class OutboxMessageConsumerConfiguration : IEntityTypeConfiguration<OutboxMessageConsumer>
 {
     public void Configure(EntityTypeBuilder<OutboxMessageConsumer> builder)
