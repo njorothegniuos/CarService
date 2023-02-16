@@ -1,8 +1,8 @@
-﻿using Gatherly.Domain.DomainEvents;
-using Gatherly.Domain.Primitives;
-using Gatherly.Domain.ValueObjects;
+﻿using Domain.DomainEvents;
+using Domain.Primitives;
+using Domain.ValueObjects;
 
-namespace Gatherly.Domain.Entities;
+namespace Domain.Entities;
 
 public sealed class Member : AggregateRoot, IAuditableEntity
 {
