@@ -20,7 +20,7 @@ public sealed class VehicleController : ApiController
        [FromBody] RegisterVehicleRequest request,
        CancellationToken cancellationToken)
     {
-        var command = new CreateVehicleCommand(
+        var command = new CreateVehicleCommand(request.memberId,
             request.registrationNumber,request.model,request.year,request.vehicleColor,
             request.engineChasisNumber, request.capacity, request.numberOfPassengers, request.mileage);
 
