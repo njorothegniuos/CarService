@@ -34,4 +34,9 @@ public sealed class MemberRepository : IMemberRepository
 
     public void Update(Member member) =>
         _dbContext.Set<Member>().Update(member);
+
+    public Task<int> GetCountOfRegisteredMemberAsync(CancellationToken cancellationToken = default)
+    {
+        throw new NotImplementedException();
+    }
 }

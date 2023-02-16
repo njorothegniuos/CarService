@@ -12,4 +12,9 @@ internal sealed class EmailService : IEmailService
 
     public Task SendMemberShipFeeEmailAsync(Member member, CancellationToken cancellationToken = default) =>
         Task.CompletedTask;
+
+    public Task SendPaymentNotificationEmailAsync(CustomerToBusinessPayment customerToBusinessPayment, CancellationToken cancellationToken = default)
+    {
+        throw new NotImplementedException();
+    }
 }

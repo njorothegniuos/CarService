@@ -5,6 +5,6 @@ namespace Domain.Repositories
     public interface IMemberShipNumberRepository
     {
         void Add(MemberShipNumber memberShipNumber);
-        Task<Vehicle?> GetMemberShipNumberByIdAsync(Guid id, CancellationToken cancellationToken = default);
+        Task<MemberShipNumber?> GetMemberShipNumberByIdAsync(Guid id, CancellationToken cancellationToken = default);
     }
 }

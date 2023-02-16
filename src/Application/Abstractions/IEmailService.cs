@@ -8,4 +8,6 @@ public interface IEmailService
     Task SendWelcomeEmailAsync(Member member, CancellationToken cancellationToken = default);
 
     Task SendMemberShipFeeEmailAsync(Member member, CancellationToken cancellationToken = default);
+
+    Task SendPaymentNotificationEmailAsync(CustomerToBusinessPayment customerToBusinessPayment, CancellationToken cancellationToken = default);
 }
