@@ -54,7 +54,7 @@ builder.Services.AddSingleton<UpdateAuditableEntitiesInterceptor>();
 builder.Services.AddDbContext<ApplicationDbContext>(
     (sp, optionsBuilder) =>
     {
-        optionsBuilder.UseSqlServer(connectionString);
+        optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=CarService;User Id=sa;password=Abc.123!;Trusted_Connection=False;MultipleActiveResultSets=true;Pooling=True");
     });
 
 builder.Services.AddQuartz(configure =>
