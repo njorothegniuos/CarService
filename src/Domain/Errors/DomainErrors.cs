@@ -100,5 +100,15 @@ namespace Domain.Errors
                 "LastName.TooLong",
                 "Last name is too long");
         }
+        public static class MemberNumber
+        {
+            public static readonly Error Empty = new(
+                "MemberShipNumber.Empty",
+                "Member Ship Number is empty");
+
+            public static readonly Error TooLong = new(
+                "MemberShipNumber.TooLong",
+                "Member Ship Number is too long");
+        }
     }
 }

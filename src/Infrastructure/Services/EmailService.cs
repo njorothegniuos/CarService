@@ -9,4 +9,7 @@ internal sealed class EmailService : IEmailService
        Task.CompletedTask;
     public Task SendNewRegisteredVehicleEmailAsync(Vehicle vehicle, CancellationToken cancellationToken = default) =>
         Task.CompletedTask;
+
+    public Task SendMemberShipFeeEmailAsync(Member member, CancellationToken cancellationToken = default) =>
+        Task.CompletedTask;
 }
